@@ -1,10 +1,4 @@
 [**中文**](./README.md) | [**English**](./README_EN.md) | [**文档/Docs**](https://github.com/ymcui/Chinese-LLaMA-Alpaca/wiki)
-
-<p align="center">
-    <br>
-    <img src="./pics/banner.png" width="600"/>
-    <br>
-</p>
 <p align="center">
     <img alt="GitHub" src="https://img.shields.io/github/license/ymcui/Chinese-LLaMA-Alpaca.svg?color=blue&style=flat-square">
     <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/ymcui/Chinese-LLaMA-Alpaca">
