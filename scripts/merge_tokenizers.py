@@ -28,8 +28,8 @@ print(llama_tokenizer.all_special_tokens)
 print(llama_tokenizer.all_special_ids)
 print(llama_tokenizer.special_tokens_map)
 
-## Add Chinese tokens to LLaMA tokenizer
-llama_spm_tokens_set=set(p.piece for p in llama_spm.pieces)
+# # Add Chinese tokens to LLaMA tokenizer
+llama_spm_tokens_set = set(p.piece for p in llama_spm.pieces)
 print(len(llama_spm_tokens_set))
 print(f"Before:{len(llama_spm_tokens_set)}")
 for p in chinese_spm.pieces:
@@ -41,10 +41,10 @@ for p in chinese_spm.pieces:
         llama_spm.pieces.append(new_p)
 print(f"New model pieces: {len(llama_spm.pieces)}")
 
-## Save
+# # Save
 output_sp_dir = 'merged_tokenizer_sp'
 output_hf_dir = 'merged_tokenizer_hf' # the path to save Chinese-LLaMA tokenizer
-os.makedirs(output_sp_dir,exist_ok=True)
+os.makedirs(output_sp_dir, exist_ok=True)
 with open(output_sp_dir+'/chinese_llama.model', 'wb') as f:
     f.write(llama_spm.SerializeToString())
 tokenizer = LlamaTokenizer(vocab_file=output_sp_dir+'/chinese_llama.model')
